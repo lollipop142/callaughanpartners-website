@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Callaughan Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0c1b2a;
+  --blue:#0f2d5a;
+  --blue-light:#1a4480;
+  --cream:#f5f1ea;
+  --warm-white:#fdfcfa;
+  --grey:#6b7280;
+  --light-grey:#e2ddd6;
+  --text:#1a1a1a;
+  --blush:#e4c3a9;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--warm-white);
+  color:var(--text);
+  overflow-x:hidden;
+}
+section{scroll-margin-top:100px;}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav.lux-nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:26px 32px 0;
+  height:160px;
+  transition:background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;
+}
+nav.lux-nav.scrolled{
+  background:rgba(12,27,42,.78);
+  backdrop-filter:blur(14px);
+  box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
+.nav-logo{
+  display:flex;
+  align-items:flex-start;
+  text-decoration:none;
+}
+.logo-img{
+  height:128px;
+  width:auto;
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+  transition:height .35s ease;
+}
+nav.lux-nav.scrolled .logo-img{height:92px;}
+.nav-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:20px;
+  padding-top:6px;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:42px;
+  list-style:none;
+}
+.nav-links a{
+  text-decoration:none;
+  color:rgba(255,255,255,.96);
+  font-size:24px;
+  font-weight:400;
+  letter-spacing:.01em;
+  line-height:1;
+  transition:opacity .25s ease;
+}
+.nav-links a:hover{opacity:.8;}
+.nav-cta{
+  text-decoration:none;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--navy);
+  background:var(--warm-white);
+  padding:.8rem 1.6rem;
+  border-radius:2px;
+  font-weight:600;
+  transition:all .25s ease;
+}
+.nav-cta:hover{
+  background:#e8e3db;
+  transform:translateY(-2px);
+}
+.nav-hamburger{display:none;}
+.mobile-menu{display:none;}
+
+/* HERO */
+.story-hero{
+  position:relative;
+  min-height:88vh;
+  overflow:hidden;
+  background:#132844;
+}
+.story-hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1800&q=80');
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.04);
+}
+.story-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(12,27,42,.86);
+}
+.story-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1380px;
+  margin:0 auto;
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  padding:170px 6% 80px;
+}
+.story-copy{max-width:760px;}
+.story-kicker{
+  font-size:.75rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:rgba(245,241,234,.78);
+  margin-bottom:18px;
+}
+.story-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3.1rem,6vw,5.8rem);
+  line-height:.96;
+  font-weight:400;
+  color:#fff;
+}
+.story-title em{
+  color:#c9a84c;
+  font-style:italic;
+}
+.story-sub{
+  margin-top:24px;
+  max-width:720px;
+  font-size:1rem;
+  line-height:1.9;
+  color:rgba(245,241,234,.84);
+  font-weight:300;
+}
+
+/* COMMON */
+.wrap{
+  max-width:1380px;
+  margin:0 auto;
+}
+.label{
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:16px;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem,4vw,4rem);
+  line-height:.97;
+  font-weight:400;
+  color:var(--navy);
+  font-style:italic;
+}
+.copy{
+  font-size:1rem;
+  line-height:1.95;
+  color:var(--grey);
+  font-weight:300;
+}
+
+/* OUR COMPANY - REDESIGNED */
+.company-intro{
+  padding:100px 6% 90px;
+  background:var(--warm-white);
+}
+.company-grid-style{
+  display:grid;
+  grid-template-columns:minmax(320px,700px) minmax(320px,1fr);
+  gap:90px;
+  align-items:center;
+}
+.company-image-side{
+  position:relative;
+}
+.company-image-wrap{
+  position:relative;
+  max-width:680px;
+}
+.company-main-image{
+  width:100%;
+  height:700px;
+  object-fit:cover;
+  position:relative;
+  z-index:2;
+}
+.company-frame{
+  position:absolute;
+  left:70px;
+  bottom:-30px;
+  width:92%;
+  height:94%;
+  border:1px solid var(--blue);
+  z-index:1;
+}
+.company-text-side{
+  max-width:780px;
+}
+.company-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.7rem,4.5vw,4.4rem);
+  line-height:1.08;
+  font-weight:400;
+  color:var(--navy);
+  margin-bottom:24px;
+}
+.company-divider{
+  width:52px;
+  height:3px;
+  background:var(--blue);
+  margin-bottom:34px;
+}
+.company-copy{
+  max-width:760px;
+}
+.company-copy p{
+  font-size:1rem;
+  line-height:2;
+  color:var(--grey);
+  font-weight:300;
+  margin-bottom:28px;
+}
+
+/* PROMISE */
+.promise-band{
+  position:relative;
+  overflow:hidden;
+  background:#132844;
+}
+.promise-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('https://images.unsplash.com/photo-1552581234-26160f608093?w=1800&q=80');
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.04);
+}
+.promise-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(12,27,42,.9);
+}
+.promise-wrap{
+  position:relative;
+  z-index:2;
+  max-width:1380px;
+  margin:0 auto;
+  padding:88px 6%;
+}
+.promise-wrap .label{color:rgba(245,241,234,.62);}
+.promise-wrap .section-title{color:#fff;}
+.promise-text{
+  margin-top:18px;
+  max-width:820px;
+  color:rgba(245,241,234,.82);
+  line-height:1.95;
+  font-weight:300;
+  font-size:1rem;
+}
+
+/* WHY US POINTS */
+.story-points{
+  padding:90px 6%;
+  background:var(--cream);
+}
+.points-grid{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.point-card{
+  background:#fff;
+  border:1px solid var(--light-grey);
+  padding:34px 28px;
+  min-height:260px;
+}
+.point-number{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  color:var(--blush);
+  line-height:1;
+  margin-bottom:18px;
+}
+.point-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  line-height:1.05;
+  font-style:italic;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:16px;
+}
+.point-card p{
+  color:var(--grey);
+  line-height:1.8;
+  font-weight:300;
+  font-size:.98rem;
+}
+
+/* TESTIMONIALS */
+.story-testimonials{
+  padding:90px 6%;
+  background:var(--warm-white);
+}
+.testi-header{
+  margin-bottom:32px;
+}
+.testi-stage{overflow:hidden;}
+.testi-track{
+  display:flex;
+  transition:transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+.testi-card{
+  flex:0 0 100%;
+  min-width:100%;
+  background:var(--cream);
+  padding:3.5rem 4rem;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+.testi-card::before{
+  content:'\201C';
+  font-family:'Playfair Display',serif;
+  font-size:6rem;
+  color:var(--blue);
+  opacity:.12;
+  position:absolute;
+  top:1rem;
+  left:2.5rem;
+  line-height:1;
+}
+.testi-text{
+  position:relative;
+  z-index:1;
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;
+  font-style:italic;
+  line-height:1.65;
+  color:var(--navy);
+  margin-bottom:2rem;
+}
+.testi-divider{
+  width:30px;
+  height:1px;
+  background:var(--blue);
+  margin-bottom:1rem;
+}
+.testi-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--navy);
+}
+.testi-role{
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-top:.25rem;
+}
+.testi-img-wrap{
+  height:340px;
+  overflow:hidden;
+}
+.testi-img{
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+}
+.testi-dots{
+  display:flex;
+  gap:.6rem;
+  margin-top:2rem;
+  justify-content:center;
+}
+.testi-dot{
+  width:24px;
+  height:2px;
+  background:var(--light-grey);
+  border:none;
+  cursor:pointer;
+  padding:0;
+  transition:background .3s,width .3s;
+}
+.testi-dot.active{
+  background:var(--blue);
+  width:40px;
+}
+
+/* NEWSLETTER */
+.story-newsletter{
+  padding:90px 6%;
+  background:var(--cream);
+}
+.news-grid{
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  gap:56px;
+  align-items:start;
+}
+.news-copy p{
+  margin-top:16px;
+}
+.newsletter-form{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+.form-row{
+  display:flex;
+  gap:1rem;
+}
+.form-field{
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+  flex:1;
+}
+.form-field label{
+  font-size:.68rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  border:1px solid var(--light-grey);
+  background:var(--warm-white);
+  padding:.95rem 1rem;
+  font-size:.92rem;
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  outline:none;
+  border-radius:2px;
+  transition:border-color .2s;
+  resize:vertical;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  border-color:var(--blue);
+}
+.form-note{
+  font-size:.84rem;
+  color:var(--grey);
+  line-height:1.8;
+  font-weight:300;
+}
+.btn-primary{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:1rem 2rem;
+  font-size:.78rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  border-radius:2px;
+  transition:background .25s ease, transform .2s ease;
+}
+.btn-primary:hover{
+  background:var(--blue-light);
+  transform:translateY(-2px);
+}
+
+/* TEAM */
+.team-section{
+  padding:90px 6% 110px;
+  background:var(--warm-white);
+}
+.team-intro{
+  max-width:860px;
+  margin-top:18px;
+  margin-bottom:34px;
+}
+.team-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.team-card{
+  border:1px solid var(--light-grey);
+  background:#fff;
+  overflow:hidden;
+}
+.team-photo{
+  height:380px;
+  background-size:cover;
+  background-position:center;
+}
+.team-card:nth-child(1) .team-photo{
+  background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80');
+}
+.team-card:nth-child(2) .team-photo{
+  background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80');
+}
+.team-body{
+  padding:30px 28px 32px;
+}
+.team-name{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;
+  line-height:1.02;
+  font-style:italic;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+.team-role{
+  font-size:.74rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:16px;
+}
+.team-body p{
+  color:var(--grey);
+  line-height:1.9;
+  font-weight:300;
+  font-size:.98rem;
+}
+
+/* OPPORTUNITIES */
+.opportunities{
+  padding:90px 6% 110px;
+  background:var(--navy);
+}
+.opportunities .label{color:rgba(245,241,234,.62);}
+.opportunities .section-title{color:#fff;}
+.opp-wrap{
+  max-width:1380px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:56px;
+}
+.opp-copy p{
+  color:rgba(245,241,234,.78);
+  line-height:1.95;
+  font-weight:300;
+  margin-bottom:1rem;
+}
+.opp-box{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(228,195,169,.18);
+  padding:30px;
+}
+.opp-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;
+  font-style:italic;
+  font-weight:500;
+  color:#fff;
+  margin-bottom:16px;
+}
+.opp-box p{
+  color:rgba(245,241,234,.78);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:1rem;
+}
+.upload-list{
+  list-style:none;
+  margin:20px 0 22px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.upload-list li{
+  position:relative;
+  padding-left:18px;
+  color:rgba(245,241,234,.84);
+  line-height:1.7;
+}
+.upload-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.78em;
+  width:7px;
+  height:1px;
+  background:var(--blush);
+}
+.upload-row{
+  display:flex;
+  gap:1rem;
+}
+.upload-row .form-field input{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(228,195,169,.2);
+  color:#fff;
+}
+.upload-row .form-field input::placeholder{
+  color:rgba(245,241,234,.45);
+}
+.upload-row .form-field label{
+  color:rgba(245,241,234,.5);
+}
+.upload-btn{
+  background:var(--warm-white);
+  color:var(--navy);
+}
+.upload-btn:hover{
+  background:#e8e3db;
+}
+
+/* FOOTER */
+
+@media(max-width:1200px){
+  .footer-grid{
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:2.5rem;
+  }
+}
+
+@media(max-width:900px){
+  footer{
+    padding:4rem 6% 2.5rem;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem;
+  }
+
+  .footer-brand{
+    max-width:none;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    gap:.8rem;
+  }
+}
+
+@media(max-width:600px){
+  footer{
+    padding:3.5rem 5% 2rem;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  .footer-legal{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  nav.lux-nav{
+    height:135px;
+    padding:20px 24px 0;
+  }
+  .logo-img{height:100px;}
+  nav.lux-nav.scrolled .logo-img{height:78px;}
+  .nav-links{gap:26px;}
+  .nav-links a{font-size:19px;}
+  .company-grid-style,
+  .news-grid,
+  .opp-wrap{
+    grid-template-columns:1fr;
+  }
+  .company-image-wrap{
+    max-width:760px;
+  }
+  .company-main-image{
+    height:560px;
+  }
+  .company-frame{
+    left:40px;
+    bottom:-22px;
+    width:90%;
+    height:94%;
+  }
+  .points-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .team-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media(max-width:900px){
+  .nav-right{display:none;}
+  .nav-hamburger{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:4px;
+    z-index:1001;
+  }
+  .nav-hamburger span{
+    display:block;
+    width:24px;
+    height:2px;
+    background:var(--cream);
+    transition:background .4s,transform .3s,opacity .3s;
+  }
+  nav.lux-nav{
+    align-items:center;
+    height:100px;
+    padding:12px 20px;
+  }
+  .logo-img{height:82px;}
+  nav.lux-nav.scrolled .logo-img{height:72px;}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-hamburger.open span:nth-child(2){opacity:0;}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:var(--navy);
+    z-index:999;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    font-weight:400;
+    color:var(--cream);
+    text-decoration:none;
+    letter-spacing:.05em;
+  }
+  .mobile-menu .mob-cta{
+    background:var(--warm-white);
+    color:var(--navy);
+    padding:.8rem 2rem;
+    border-radius:2px;
+    font-family:'Inter',sans-serif;
+    font-size:.85rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    margin-top:1rem;
+  }
+  .story-hero-content{padding:160px 6% 84px;}
+  .points-grid,
+  .team-grid{
+    grid-template-columns:1fr;
+  }
+  .testi-card{
+    grid-template-columns:1fr;
+    padding:2rem 1.8rem;
+    gap:1.5rem;
+  }
+  .testi-img-wrap{
+    height:220px;
+    order:1;
+  }
+  .testi-content{
+    order:2;
+  }
+  .form-row,
+  .upload-row{
+    flex-direction:column;
+  }
+}
+@media(max-width:700px){
+  .company-intro{
+    padding:80px 5% 70px;
+  }
+  .company-main-image{
+    height:420px;
+  }
+  .company-frame{
+    left:20px;
+    bottom:-16px;
+    width:88%;
+    height:92%;
+  }
+  .company-title{
+    font-size:2.3rem;
+  }
+  .company-copy p{
+    font-size:.98rem;
+    line-height:1.9;
+    margin-bottom:22px;
+  }
+}
+@media(max-width:600px){
+  .story-hero-content{padding:148px 5% 76px;}
+  .story-title{font-size:clamp(2.3rem,11vw,3.7rem);}
+  .section-title{font-size:2.4rem;}
+  .company-intro,
+  .story-points,
+  .story-testimonials,
+  .story-newsletter,
+  .team-section,
+  .opportunities{
+    padding-left:5%;
+    padding-right:5%;
+  }
+  .team-photo{height:320px;}
+}
+.career-form .form-field input[type="file"]{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(228,195,169,.2);
+  color:rgba(245,241,234,.82);
+  padding:.85rem 1rem;
+  border-radius:2px;
+}
+
+.career-form .form-field input[type="file"]::file-selector-button{
+  background:var(--warm-white);
+  color:var(--navy);
+  border:none;
+  padding:.7rem 1rem;
+  margin-right:12px;
+  border-radius:2px;
+  font-family:'Inter',sans-serif;
+  font-size:.76rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.career-form .form-field input[type="file"]:focus{
+  border-color:rgba(228,195,169,.45);
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar" class="lux-nav">
+  <a href="index.html#hero" class="nav-logo">
+    <img src="callaughan.png" alt="Callaughan Partners" class="logo-img">
+  </a>
+
+  <div class="nav-right">
+    <a href="index.html#newsletter" class="nav-cta">Book an Appointment</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="expertise.html">Expertise</a></li>
+      <li><a href="ourstory.html">Our Story</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="index.html#newsletter">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="callaughan-logo-updated.html" onclick="closeMenu()">Home</a>
+  <a href="expertise.html" onclick="closeMenu()">Expertise</a>
+  <a href="ourstory.html" onclick="closeMenu()">Our Story</a>
+  <a href="insights.html" onclick="closeMenu()">Insights</a>
+  <a href="index.html#newsletter" class="mob-cta" onclick="closeMenu()">Book an Appointment</a>
+</div>
+
+<section class="story-hero">
+  <div class="story-hero-bg"></div>
+  <div class="story-hero-overlay"></div>
+
+  <div class="story-hero-content">
+    <div class="story-copy">
+     
+      <h1 class="story-title">Our <em>Story</em></h1>
+      <p class="story-sub">
+        Built on passion, integrity, and loyalty, Callaughan Partners has grown
+        through trusted relationships, practical advice, and a commitment to
+        helping clients move forward with greater confidence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="company-intro">
+  <div class="wrap company-grid-style">
+
+    <div class="company-image-side">
+      <div class="company-image-wrap">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80" alt="Callaughan Partners team meeting" class="company-main-image">
+        <div class="company-frame"></div>
+      </div>
+    </div>
+
+    <div class="company-text-side">
+      
+      <h2 class="section-title company-title">Our Company</h2>
+      <div class="company-divider"></div>
+
+      <div class="company-copy copy">
+        <p>
+           Callaughan Partners is a Sydney tax accountant, Sydney business accountant,
+      and advisory firm focused on providing practical solutions to business owners
+      and individuals seeking growth, stronger financial clarity, and long-term
+      wealth creation
+        </p>
+
+        <p>
+         Our approach is simple: combine deep technical expertise with genuine
+      responsiveness, plain English advice, and tailored service that reflects
+      the exact needs of each client.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="promise-band">
+  <div class="promise-bg"></div>
+  <div class="promise-overlay"></div>
+  <div class="promise-wrap">
+    <div class="label">Our Promise</div>
+    <h2 class="section-title">Clear advice. Genuine support. Practical outcomes.</h2>
+    <p class="promise-text">
+      We are committed to offering proactive guidance, fixed-fee clarity,
+      responsive communication, and advice that feels accessible rather than
+      overwhelming. Our goal is not only to help you meet obligations, but to
+      help you make better decisions with confidence.
+    </p>
+  </div>
+</section>
+
+<section class="story-points">
+  <div class="wrap">
+    <div class="label">Why Clients Choose Us</div>
+    <h2 class="section-title">What sets Callaughan Partners apart.</h2>
+
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-number">01</div>
+        <h3>Proactive Support</h3>
+        <p>We return calls and emails, move quickly, and stay available throughout the year when questions or decisions arise.</p>
+      </div>
+
+      <div class="point-card">
+        <div class="point-number">02</div>
+        <h3>Clear Advice</h3>
+        <p>We explain complex accounting and taxation matters in plain English, making your next step easier to understand.</p>
+      </div>
+
+      <div class="point-card">
+        <div class="point-number">03</div>
+        <h3>Tailored Solutions</h3>
+        <p>Every recommendation is shaped around your exact situation, priorities, and long-term financial objectives.</p>
+      </div>
+
+      <div class="point-card">
+        <div class="point-number">04</div>
+        <h3>Fixed Fee Clarity</h3>
+        <p>We believe good service should feel transparent. Clear scope and pricing help create stronger trust from the start.</p>
+      </div>
+
+      <div class="point-card">
+        <div class="point-number">05</div>
+        <h3>Passion & Integrity</h3>
+        <p>Our business has been built on the values of passion, integrity, and loyalty — and those values shape how we work.</p>
+      </div>
+
+      <div class="point-card">
+        <div class="point-number">06</div>
+        <h3>Trusted Partnership</h3>
+        <p>We aim to become more than an accountant. We aim to be a dependable financial partner clients can rely on year after year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story-testimonials">
+  <div class="wrap">
+    <div class="testi-header">
+      <div class="label">What Our Clients Are Saying</div>
+      <h2 class="section-title">Trusted by clients who value clarity and care.</h2>
+    </div>
+
+    <div class="testi-stage">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-content">
+            <p class="testi-text">“Callaughan Partners transformed the way we understand our finances. Their advice is clear, practical, and genuinely supportive.”</p>
+            <div class="testi-divider"></div>
+            <div class="testi-name">Sarah Mitchell</div>
+            <div class="testi-role">Director, Mitchell Developments</div>
+          </div>
+          <div class="testi-img-wrap">
+            <div class="testi-img" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80');"></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-content">
+            <p class="testi-text">“We came for tax support and stayed because they became a trusted advisor. The communication and professionalism are exceptional.”</p>
+            <div class="testi-divider"></div>
+            <div class="testi-name">Daniel Harper</div>
+            <div class="testi-role">Property Investor</div>
+          </div>
+          <div class="testi-img-wrap">
+            <div class="testi-img" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80');"></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-content">
+            <p class="testi-text">“Their advice feels thoughtful and personal. They explain things clearly and make even complicated decisions feel manageable.”</p>
+            <div class="testi-divider"></div>
+            <div class="testi-name">Rebecca Green</div>
+            <div class="testi-role">Business Owner</div>
+          </div>
+          <div class="testi-img-wrap">
+            <div class="testi-img" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80');"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-dots">
+      <button class="testi-dot active" onclick="goToTesti(0)"></button>
+      <button class="testi-dot" onclick="goToTesti(1)"></button>
+      <button class="testi-dot" onclick="goToTesti(2)"></button>
+    </div>
+  </div>
+</section>
+
+<section class="story-newsletter">
+  <div class="wrap news-grid">
+    <div class="news-copy">
+      <div class="label">Newsletter</div>
+      <h2 class="section-title">Stay up to date with practical insights.</h2>
+      <p class="copy">
+        Sign up to receive updates, business guidance, and financial insights from
+        the Callaughan Partners team. Designed to be useful, relevant, and easy to
+        understand.
+      </p>
+    </div>
+
+    <form class="newsletter-form" onsubmit="handleNL(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane" required>
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com" required>
+      </div>
+
+      <div class="form-field">
+        <label>I am a…</label>
+        <select>
+          <option value="">Select one</option>
+          <option>Business Owner</option>
+          <option>Property Investor</option>
+          <option>Individual / Employee</option>
+          <option>SMSF Trustee</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <p class="form-note">A simplified version of the home page newsletter form can live here, keeping the same brand style while feeling more integrated into the story page.</p>
+
+      <button type="submit" class="btn-primary">Sign Up</button>
+      <p id="nl-success" style="display:none;font-size:.84rem;color:var(--blue);">Thank you. You’re on the list.</p>
+    </form>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="wrap">
+    <div class="label"> Meet Our Team</div>
+    <h2 class="section-title">The people behind the advice.</h2>
+    <p class="team-intro copy">
+      A short introduction to the team can live here, giving the page a warmer,
+      more personal tone while helping clients connect with the people behind the
+      business.
+    </p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo"></div>
+        <div class="team-body">
+          <div class="team-name">Brad Callaughan</div>
+          <div class="team-role">Director</div>
+          <p>
+            Brad leads Callaughan Partners with a strong focus on practical advice,
+            long-term client relationships, and helping businesses and individuals
+            move forward with greater confidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo"></div>
+        <div class="team-body">
+          <div class="team-name">Hayley</div>
+          <div class="team-role">Director</div>
+          <p>
+            Hayley brings a thoughtful and client-focused approach to the firm,
+            helping create the kind of supportive, responsive experience that
+            clients value and remember.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="opportunities">
+  <div class="opp-wrap">
+    <div>
+      <div class="label">Career Opportunities</div>
+      <h2 class="section-title">Join a business built on passion, integrity, and loyalty.</h2>
+    </div>
+
+    <div class="opp-box">
+  <h3>Interested in working with us?</h3>
+  <p>
+    This section can serve as a careers prompt for future applicants. It can
+    remain simple for now while still feeling intentional and useful.
+  </p>
+
+  <form class="career-form" action="#" method="post" enctype="multipart/form-data">
+    <ul class="upload-list">
+      
+    </ul>
+
+    <div class="upload-row">
+      <div class="form-field">
+        <label>Your Name</label>
+        <input type="text" name="full_name" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-field">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+    </div>
+
+    <div class="upload-row">
+      <div class="form-field">
+        <label>Upload CV</label>
+        <input type="file" name="cv_file" accept=".pdf,.doc,.docx" required>
+      </div>
+
+      <div class="form-field">
+        <label>Upload Cover Letter</label>
+        <input type="file" name="cover_letter_file" accept=".pdf,.doc,.docx">
+      </div>
+    </div>
+
+    <div class="form-field" style="margin-top:1rem;">
+      <label>Message</label>
+      <textarea name="message" rows="5" placeholder="Tell us a little about yourself"></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary upload-btn" style="margin-top:1rem;">Submit Interest</button>
+  </form>
+</div>
+
+
+
+<script>
+function toggleMenu(){
+  const h=document.getElementById('hamburger');
+  const m=document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow='';
+}
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+
+const testiTrack=document.getElementById('testiTrack');
+const testiDotEls=[...document.querySelectorAll('.testi-dot')];
+let ti=0,testiTimer;
+
+function goToTesti(n){
+  ti=(n+3)%3;
+  testiTrack.style.transform='translateX(-'+(ti*100)+'%)';
+  testiDotEls.forEach((d,i)=>d.classList.toggle('active',i===ti));
+}
+function resetTesti(){
+  clearInterval(testiTimer);
+  testiTimer=setInterval(()=>goToTesti(ti+1),5000);
+}
+resetTesti();
+
+function handleNL(e){
+  e.preventDefault();
+  document.getElementById('nl-success').style.display='block';
+  e.target.reset();
+}
+</script>
+
+</body>
+</html>
