@@ -248,34 +248,31 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
   margin-bottom:28px;
 }
 
-/* PROMISE */
+/* PROMISE - FIXED BACKGROUND */
 .promise-band{
   position:relative;
-  overflow:hidden;
-  background:#132844;
-}
-.promise-bg{
-  position:absolute;
-  inset:0;
-  background-image:url('https://images.unsplash.com/photo-1552581234-26160f608093?w=1800&q=80');
+  padding:88px 0;
+  background-image:
+    linear-gradient(rgba(12,27,42,.88), rgba(12,27,42,.88)),
+    url('https://images.unsplash.com/photo-1552581234-26160f608093?w=1800&q=80');
   background-size:cover;
   background-position:center;
-  transform:scale(1.04);
-}
-.promise-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(12,27,42,.9);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 .promise-wrap{
   position:relative;
   z-index:2;
   max-width:1380px;
   margin:0 auto;
-  padding:88px 6%;
+  padding:0 6%;
 }
-.promise-wrap .label{color:rgba(245,241,234,.62);}
-.promise-wrap .section-title{color:#fff;}
+.promise-wrap .label{
+  color:rgba(245,241,234,.62);
+}
+.promise-wrap .section-title{
+  color:#fff;
+}
 .promise-text{
   margin-top:18px;
   max-width:820px;
@@ -639,8 +636,7 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
   background:#e8e3db;
 }
 
-/* FOOTER */
-
+/* FOOTER PLACEHOLDER RESPONSIVE FROM ORIGINAL */
 @media(max-width:1200px){
   .footer-grid{
     grid-template-columns:1.2fr 1fr 1fr;
@@ -799,6 +795,9 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
   .upload-row{
     flex-direction:column;
   }
+  .promise-band{
+    background-attachment:scroll;
+  }
 }
 @media(max-width:700px){
   .company-intro{
@@ -874,8 +873,8 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
   <div class="nav-right">
     <a href="index.html#newsletter" class="nav-cta">Book an Appointment</a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Expertise</a></li>
+      <li><a href="callaughan-logo-updated.html">Home</a></li>
+      <li><a href="expertise.html">Expertise</a></li>
       <li><a href="ourstory.html">Our Story</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="index.html#newsletter">Contact</a></li>
@@ -889,10 +888,10 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="callaughan-logo-updated.html" onclick="closeMenu()">Home</a>
-  <a href="#" onclick="closeMenu()">Expertise</a>
+  <a href="expertise.html" onclick="closeMenu()">Expertise</a>
   <a href="ourstory.html" onclick="closeMenu()">Our Story</a>
   <a href="insights.html" onclick="closeMenu()">Insights</a>
-  <a href="#" class="mob-cta" onclick="closeMenu()">Book an Appointment</a>
+  <a href="index.html#newsletter" class="mob-cta" onclick="closeMenu()">Book an Appointment</a>
 </div>
 
 <section class="story-hero">
@@ -901,7 +900,6 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
 
   <div class="story-hero-content">
     <div class="story-copy">
-     
       <h1 class="story-title">Our <em>Story</em></h1>
       <p class="story-sub">
         Built on passion, integrity, and loyalty, Callaughan Partners has grown
@@ -923,22 +921,21 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
     </div>
 
     <div class="company-text-side">
-      
       <h2 class="section-title company-title">Our Company</h2>
       <div class="company-divider"></div>
 
       <div class="company-copy copy">
         <p>
-           Callaughan Partners is a Sydney tax accountant, Sydney business accountant,
-      and advisory firm focused on providing practical solutions to business owners
-      and individuals seeking growth, stronger financial clarity, and long-term
-      wealth creation
+          Callaughan Partners is a Sydney tax accountant, Sydney business accountant,
+          and advisory firm focused on providing practical solutions to business owners
+          and individuals seeking growth, stronger financial clarity, and long-term
+          wealth creation
         </p>
 
         <p>
-         Our approach is simple: combine deep technical expertise with genuine
-      responsiveness, plain English advice, and tailored service that reflects
-      the exact needs of each client.
+          Our approach is simple: combine deep technical expertise with genuine
+          responsiveness, plain English advice, and tailored service that reflects
+          the exact needs of each client.
         </p>
       </div>
     </div>
@@ -947,8 +944,6 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
 </section>
 
 <section class="promise-band">
-  <div class="promise-bg"></div>
-  <div class="promise-overlay"></div>
   <div class="promise-wrap">
     <div class="label">Our Promise</div>
     <h2 class="section-title">Clear advice. Genuine support. Practical outcomes.</h2>
@@ -1158,51 +1153,49 @@ nav.lux-nav.scrolled .logo-img{height:92px;}
     </div>
 
     <div class="opp-box">
-  <h3>Interested in working with us?</h3>
-  <p>
-    This section can serve as a careers prompt for future applicants. It can
-    remain simple for now while still feeling intentional and useful.
-  </p>
+      <h3>Interested in working with us?</h3>
+      <p>
+        This section can serve as a careers prompt for future applicants. It can
+        remain simple for now while still feeling intentional and useful.
+      </p>
 
-  <form class="career-form" action="#" method="post" enctype="multipart/form-data">
-    <ul class="upload-list">
-      
-    </ul>
+      <form class="career-form" action="#" method="post" enctype="multipart/form-data">
+        <ul class="upload-list"></ul>
 
-    <div class="upload-row">
-      <div class="form-field">
-        <label>Your Name</label>
-        <input type="text" name="full_name" placeholder="Your full name" required>
-      </div>
+        <div class="upload-row">
+          <div class="form-field">
+            <label>Your Name</label>
+            <input type="text" name="full_name" placeholder="Your full name" required>
+          </div>
 
-      <div class="form-field">
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="Your email" required>
-      </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+        </div>
+
+        <div class="upload-row">
+          <div class="form-field">
+            <label>Upload CV</label>
+            <input type="file" name="cv_file" accept=".pdf,.doc,.docx" required>
+          </div>
+
+          <div class="form-field">
+            <label>Upload Cover Letter</label>
+            <input type="file" name="cover_letter_file" accept=".pdf,.doc,.docx">
+          </div>
+        </div>
+
+        <div class="form-field" style="margin-top:1rem;">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Tell us a little about yourself"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary upload-btn" style="margin-top:1rem;">Submit Interest</button>
+      </form>
     </div>
-
-    <div class="upload-row">
-      <div class="form-field">
-        <label>Upload CV</label>
-        <input type="file" name="cv_file" accept=".pdf,.doc,.docx" required>
-      </div>
-
-      <div class="form-field">
-        <label>Upload Cover Letter</label>
-        <input type="file" name="cover_letter_file" accept=".pdf,.doc,.docx">
-      </div>
-    </div>
-
-    <div class="form-field" style="margin-top:1rem;">
-      <label>Message</label>
-      <textarea name="message" rows="5" placeholder="Tell us a little about yourself"></textarea>
-    </div>
-
-    <button type="submit" class="btn-primary upload-btn" style="margin-top:1rem;">Submit Interest</button>
-  </form>
-</div>
-
-
+  </div>
+</section>
 
 <script>
 function toggleMenu(){
